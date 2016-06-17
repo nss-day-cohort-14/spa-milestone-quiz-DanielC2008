@@ -16,7 +16,8 @@ var usedCars = (function (modifyCars) {
 
 		parseCars.addEventListener("error", function() {
 			alert("ERROR");
-		});		
+		});
+
 	};
 
 	//////////// GETTER FOR INVENTORY ///////////////
@@ -39,7 +40,7 @@ var usedCars = (function (modifyCars) {
   			 carDescription = document.createElement('li');
   			 ////// CLASSES/ID //////
   			 createCar.classList.add(`createCar`);
-  			 createCar.classList.add('col-sm-4');
+  			 createCar.classList.add('col-md-3');
   			 createCar.id = `createCar${i}`;
   			 carMake.classList.add(`carMake`);
   			 carMake.id = `carMake${i}`;
@@ -69,15 +70,8 @@ var usedCars = (function (modifyCars) {
   			 newCar = createCar;
   			 
   			 carEl.appendChild(newCar);
-
-
 	  	});	
-
 	};
-
-
-
-
 
 	return modifyCars;
 })(usedCars || {});

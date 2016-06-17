@@ -1,3 +1,8 @@
 #navBar {
 	background-color: goldenrod;
 }
+
+.createCar {
+	margin: 20px 4%;
+	padding: 15px;
+}

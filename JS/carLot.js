@@ -41,19 +41,19 @@ var usedCars = (function (modifyCars) {
   			 ////// CLASSES/ID //////
   			 createCar.classList.add(`createCar`);
   			 createCar.classList.add('col-md-3');
-  			 createCar.id = `createCar${i}`;
+  			 createCar.id = `createCar--${i}`;
   			 carMake.classList.add(`carMake`);
-  			 carMake.id = `carMake${i}`;
+  			 carMake.id = `carMake--${i}`;
   			 carModel.classList.add(`carModel`);
-  			 carModel.id = `carModel${i}`;
+  			 carModel.id = `carModel--${i}`;
   			 carYear.classList.add(`carYear`);
-  			 carYear.id = `carYear${i}`;
+  			 carYear.id = `carYear--${i}`;
    			 carPrice.classList.add(`carPrice`);
-  			 carPrice.id = `carPrice${i}`;
+  			 carPrice.id = `carPrice--${i}`;
   			 carPurchased.classList.add(`carPurchased`);
-  			 carPurchased.id = `carPurchased${i}`;
+  			 carPurchased.id = `carPurchased--${i}`;
   			 carDescription.classList.add(`carDescription`);
-  			 carDescription.id = `carDescription${i}`;
+  			 carDescription.id = `carDescription--${i}`;
   			 ////// PRINT ARRAY //////
   			 carMake.innerText = `Make: ${value.make}`;
   			 carModel.innerText = `Model: ${value.model}`;
@@ -70,6 +70,7 @@ var usedCars = (function (modifyCars) {
   			 newCar = createCar;
   			 
   			 carEl.appendChild(newCar);
+  			 document.getElementById(`createCar--${i}`).addEventListener("click", usedCars.getId);
 	  	});	
 	};
 

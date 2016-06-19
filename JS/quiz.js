@@ -1,11 +1,15 @@
-var getContainer = document.getElementById("carEl");
+function populatePage () {
+  // Loop over the inventory and populate the page
+	usedCars.loadCars(usedCars.buildCar);
+	usedCars.loadCars(usedCars.addStyle);
 
-// RUN FUNCTIONS THAT OUTPUT TO THE DOM//
-usedCars.loadCars(usedCars.buildCar);
-usedCars.loadCars(usedCars.addBackground);
+  // Now that the DOM is loaded, establish all the event listeners needed
+ var getInput = document.getElementById('changeDes');
+ getInput.addEventListener("keyup", usedCars.changeInput)
+	// usedCars.activateEvents();
 
-//EVENTLISTENERS//
-// getContainer.addEventListeners("click", usedCars.)
+}
+populatePage();
 
 
 

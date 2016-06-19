@@ -5,4 +5,10 @@
 .createCar {
 	margin: 20px 4%;
 	padding: 15px;
+	border: 6px solid black;
+}
+
+.changeEl { 
+	border: 7px dashed;
+	background-color: thistle;
 }

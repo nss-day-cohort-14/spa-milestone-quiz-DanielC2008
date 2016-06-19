@@ -4,9 +4,7 @@ function populatePage () {
 	usedCars.loadCars(usedCars.addStyle);
 
   // Now that the DOM is loaded, establish all the event listeners needed
- var getInput = document.getElementById('changeDes');
- getInput.addEventListener("keyup", usedCars.changeInput)
-	// usedCars.activateEvents();
+	usedCars.activateEvents();
 
 }
 populatePage();

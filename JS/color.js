@@ -4,12 +4,19 @@ var usedCars = (function(modifyCars) {
 	var clickedDiv;
 
 
+	// Adding colored border to match car
  	modifyCars.addStyle = function(inventory) {
 		inventory.forEach(function(value, i) {
 			var currentCar = cars[i];
 			var currentColor = value.color;
 			currentCar.style.borderColor = value.color;
 		})
+	}
+	// Gather clicked container and color and pass to carClicked
+	modifyCars.getId = function() {
+		var clicked = event.currentTarget;
+		var color = "thistle";
+		usedCars.carClicked(clicked, color);
 	}
 
 	//Function to change border and color and gain focus
@@ -22,6 +29,18 @@ var usedCars = (function(modifyCars) {
 		getInput.focus();
 		clickedDiv = clicked;
 	};
+	// input changes the clicked car div description
+	modifyCars.changeInput = function() {
+		var clicked = usedCars.getClicked();
+  	if (event.keyCode === 13) {
+  		usedCars.getInput().value = " ";
+		}
+		else {
+			var changeCar = clicked.getElementsByClassName('carDescription')[0];
+			changeCar.innerHTML = usedCars.getInput().value;
+		}
+
+	}
 
 	modifyCars.getInput = function() {
 		return getInput;

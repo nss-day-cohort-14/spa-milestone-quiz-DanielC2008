@@ -36,7 +36,7 @@ var usedCars = (function (modifyCars) {
   			 carModel = document.createElement('li'),
   			 carYear = document.createElement('li'),
   			 carPrice = document.createElement('li'),
-  			 carPurchased = document.createElement('button'),
+  			 carPurchased = document.createElement('li'),
   			 carDescription = document.createElement('li');
   			 ////// CLASSES/ID //////
   			 createCar.classList.add(`createCar`);
@@ -59,13 +59,20 @@ var usedCars = (function (modifyCars) {
   			 carModel.innerText = `Model: ${value.model}`;
   			 carYear.innerText = `Year: ${value.year}`;
   			 carPrice.innerText = `Price: $${value.price}`;
-  			 carDescription.innerText = `Available: ${value.description}`;
+         if (value.purchased === false) {
+          carPurchased.innerText = "Available";
+         }
+         else {
+          carPurchased.innerText = "Not Available";
+         }
+  			 carDescription.innerText = `${value.description}`;
   			 ////// APPEND ELEMENTS //////
   			 createCar.appendChild(carWrapper);
   			 carWrapper.appendChild(carMake);
   			 carWrapper.appendChild(carModel);
   			 carWrapper.appendChild(carYear);
   			 carWrapper.appendChild(carPrice);
+         carWrapper.appendChild(carPurchased); 
   			 carWrapper.appendChild(carDescription);
   			 newCar = createCar;
   			 

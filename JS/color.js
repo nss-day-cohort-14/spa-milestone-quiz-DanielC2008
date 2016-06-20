@@ -41,7 +41,7 @@ var usedCars = (function(modifyCars) {
 		}
 
 	}
-
+	
 	modifyCars.getInput = function() {
 		return getInput;
 	}

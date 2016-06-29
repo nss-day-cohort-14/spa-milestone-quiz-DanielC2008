@@ -33,7 +33,8 @@ var usedCars = (function (modifyCars) {
   			 var createCar = document.createElement('div'),
   			 carWrapper = document.createElement('ul'),
   			 carMake = document.createElement('li'),
-  			 carModel = document.createElement('li'),
+         carModel = document.createElement('li'),
+  			 carColor = document.createElement('li'),
   			 carYear = document.createElement('li'),
   			 carPrice = document.createElement('li'),
   			 carPurchased = document.createElement('li'),
@@ -44,8 +45,10 @@ var usedCars = (function (modifyCars) {
   			 createCar.id = `createCar--${i}`;
   			 carMake.classList.add(`carMake`);
   			 carMake.id = `carMake--${i}`;
-  			 carModel.classList.add(`carModel`);
-  			 carModel.id = `carModel--${i}`;
+         carModel.classList.add(`carModel`);
+         carModel.id = `carModel--${i}`;
+         carColor.classList.add(`carColor`);
+  			 carColor.id = `carColor--${i}`;
   			 carYear.classList.add(`carYear`);
   			 carYear.id = `carYear--${i}`;
    			 carPrice.classList.add(`carPrice`);
@@ -56,7 +59,8 @@ var usedCars = (function (modifyCars) {
   			 carDescription.id = `carDescription--${i}`;
   			 ////// PRINT ARRAY //////
   			 carMake.innerText = `Make: ${value.make}`;
-  			 carModel.innerText = `Model: ${value.model}`;
+         carModel.innerText = `Model: ${value.model}`;
+  			 carColor.innerText = `Color: ${value.color}`;
   			 carYear.innerText = `Year: ${value.year}`;
   			 carPrice.innerText = `Price: $${value.price}`;
          if (value.purchased === false) {
@@ -69,7 +73,8 @@ var usedCars = (function (modifyCars) {
   			 ////// APPEND ELEMENTS //////
   			 createCar.appendChild(carWrapper);
   			 carWrapper.appendChild(carMake);
-  			 carWrapper.appendChild(carModel);
+         carWrapper.appendChild(carModel);
+  			 carWrapper.appendChild(carColor);
   			 carWrapper.appendChild(carYear);
   			 carWrapper.appendChild(carPrice);
          carWrapper.appendChild(carPurchased); 
